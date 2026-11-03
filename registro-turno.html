@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — registro de turno con segundo tramo opcional y cruce de medianoche.">
+  <title>SLINT · Registro de turno</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/nucleo/turnos.js" defer></script>
+  <script src="js/paginas/registro-turno.js" defer></script>
+</head>
+<body data-pagina="INT-03" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Gestión de turnos</p>
+        <h1 id="titulo-pagina">Registro de turno</h1>
+        <p class="slint-subtitulo">
+          Registre un turno continuo o partido. El segundo tramo es opcional y
+          cada salida puede corresponder al día siguiente.
+        </p>
+      </header>
+
+      <div id="mensaje-registro" tabindex="-1" aria-live="polite"></div>
+
+      <form id="form-turno" class="slint-formulario" novalidate>
+        <div class="slint-formulario slint-formulario--dos-columnas">
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="colaborador">
+              Colaborador <span class="slint-campo__requerido" aria-hidden="true">*</span>
+            </label>
+            <select
+              class="slint-campo__control"
+              id="colaborador"
+              name="colaborador"
+              required
+              aria-required="true"
+              aria-describedby="error-colaborador"
+            >
+              <option value="">Seleccione un colaborador</option>
+            </select>
+            <p class="slint-campo__error" id="error-colaborador" hidden></p>
+          </div>
+
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="fecha">
+              Fecha de inicio del turno <span class="slint-campo__requerido" aria-hidden="true">*</span>
+            </label>
+            <input
+              class="slint-campo__control"
+              id="fecha"
+              name="fecha"
+              type="date"
+              required
+              aria-required="true"
+              aria-describedby="error-fecha ayuda-fecha"
+            >
+            <p class="slint-campo__ayuda" id="ayuda-fecha">Aplica a la entrada del tramo 1.</p>
+            <p class="slint-campo__error" id="error-fecha" hidden></p>
+          </div>
+        </div>
+
+        <fieldset class="slint-fieldset">
+          <legend class="slint-fieldset__leyenda">Tramo 1</legend>
+          <div class="slint-formulario slint-formulario--dos-columnas">
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="entrada1">
+                Entrada 1 <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="slint-campo__control"
+                id="entrada1"
+                name="entrada1"
+                type="time"
+                step="60"
+                required
+                aria-required="true"
+                aria-describedby="error-entrada1"
+              >
+              <p class="slint-campo__error" id="error-entrada1" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="salida1">
+                Salida 1 <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="slint-campo__control"
+                id="salida1"
+                name="salida1"
+                type="time"
+                step="60"
+                required
+                aria-required="true"
+                aria-describedby="error-salida1"
+              >
+              <p class="slint-campo__error" id="error-salida1" hidden></p>
+            </div>
+          </div>
+
+          <div class="slint-check">
+            <input id="cruce1" name="cruce1" type="checkbox">
+            <label class="slint-check__texto" for="cruce1">
+              La salida 1 corresponde al día siguiente (cruce de medianoche)
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="slint-check">
+          <input id="chk-tramo2" type="checkbox">
+          <label class="slint-check__texto" for="chk-tramo2">
+            Agregar segundo tramo (turno partido)
+          </label>
+        </div>
+
+        <fieldset class="slint-fieldset" id="tramo2" hidden>
+          <legend class="slint-fieldset__leyenda">Tramo 2 (opcional)</legend>
+          <div class="slint-formulario slint-formulario--dos-columnas">
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="entrada2">Entrada 2</label>
+              <input
+                class="slint-campo__control"
+                id="entrada2"
+                name="entrada2"
+                type="time"
+                step="60"
+                disabled
+                aria-describedby="error-entrada2"
+              >
+              <p class="slint-campo__error" id="error-entrada2" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="salida2">Salida 2</label>
+              <input
+                class="slint-campo__control"
+                id="salida2"
+                name="salida2"
+                type="time"
+                step="60"
+                disabled
+                aria-describedby="error-salida2"
+              >
+              <p class="slint-campo__error" id="error-salida2" hidden></p>
+            </div>
+          </div>
+
+          <div class="slint-check">
+            <input id="cruce2" name="cruce2" type="checkbox" disabled>
+            <label class="slint-check__texto" for="cruce2">
+              La salida 2 corresponde al día siguiente
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="slint-formulario__acciones">
+          <button class="slint-boton" type="submit" id="btn-guardar">Registrar turno</button>
+          <a class="slint-boton slint-boton--secundario" href="consulta-turnos.html">Ir a consulta</a>
+        </div>
+      </form>
+
+      <section class="slint-seccion" aria-labelledby="titulo-regla">
+        <h2 id="titulo-regla">Regla de determinación de fechas</h2>
+        <div class="slint-panel slint-mt-3">
+          <ol class="slint-lista-pendientes">
+            <li><span class="slint-badge slint-badge--neutro">1</span> La fecha de inicio aplica a la entrada del tramo 1.</li>
+            <li><span class="slint-badge slint-badge--neutro">2</span> Cada salida usa la fecha de inicio; si se marca “día siguiente”, se suma un día.</li>
+            <li><span class="slint-badge slint-badge--neutro">3</span> La entrada del tramo 2 se ubica en la fecha de fin del tramo 1.</li>
+            <li><span class="slint-badge slint-badge--neutro">4</span> La salida del tramo 2 suma un día a esa fecha si se marca “día siguiente”.</li>
+          </ol>
+          <p class="slint-texto-suave slint-mt-3">
+            Los tramos se comparan en una línea de tiempo absoluta. Una salida con
+            hora menor que la entrada no se rechaza si el cruce de medianoche está
+            marcado.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

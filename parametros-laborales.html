@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — parámetros laborales de demostración con vigencia.">
+  <title>SLINT · Parámetros laborales</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/administracion-demo.js" defer></script>
+  <script src="js/paginas/parametros-laborales.js" defer></script>
+</head>
+<body data-pagina="INT-16" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+  <header id="slint-cabecera"></header>
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Administración</p>
+        <h1>Parámetros laborales</h1>
+        <p class="slint-subtitulo">
+          Consulta de parámetros ficticios con fecha de vigencia y formulario con
+          validación frontend. Sin persistencia.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Parámetros de demostración:</strong> los valores son ilustrativos
+          y no constituyen una norma laboral vigente. No se guardan cambios.
+        </span>
+      </div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-parametros">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-parametros">Parámetros configurados</h2>
+          <span class="slint-badge slint-badge--neutro" id="contador-parametros">0 parámetros</span>
+        </div>
+        <div id="tabla-parametros" class="slint-tabla-contenedor"></div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Nuevo parámetro (demo)</h2>
+        <div class="slint-panel slint-mt-3">
+          <div id="mensaje-parametro" aria-live="polite"></div>
+
+          <form id="form-parametro" class="slint-formulario slint-formulario--dos-columnas" novalidate>
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="parametro-nombre">
+                Nombre <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="parametro-nombre" type="text" required
+                     aria-required="true" aria-describedby="error-parametro-nombre">
+              <p class="slint-campo__error" id="error-parametro-nombre" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="parametro-valor">
+                Valor <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="parametro-valor" type="text" required
+                     aria-required="true" aria-describedby="error-parametro-valor ayuda-parametro-valor">
+              <p class="slint-campo__ayuda" id="ayuda-parametro-valor">Ejemplo: 35 %, $ 12.000.</p>
+              <p class="slint-campo__error" id="error-parametro-valor" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="parametro-desde">
+                Vigente desde <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="parametro-desde" type="date" required
+                     aria-required="true" aria-describedby="error-parametro-desde">
+              <p class="slint-campo__error" id="error-parametro-desde" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="parametro-hasta">
+                Vigente hasta <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="parametro-hasta" type="date" required
+                     aria-required="true" aria-describedby="error-parametro-hasta">
+              <p class="slint-campo__error" id="error-parametro-hasta" hidden></p>
+            </div>
+
+            <div class="slint-formulario__acciones">
+              <button class="slint-boton" type="submit">Guardar (demo)</button>
+              <a class="slint-boton slint-boton--secundario" href="usuarios-roles.html">Ir a usuarios (INT-15)</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer id="slint-pie"></footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — selección de un ejemplo precargado de liquidación para demostración visual.">
+  <title>SLINT · Flujo de liquidación</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/datos/liquidaciones-demo.js" defer></script>
+  <script src="js/paginas/liquidacion-comun.js" defer></script>
+  <script src="js/paginas/liquidacion-flujo.js" defer></script>
+</head>
+<body data-pagina="INT-07" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Liquidaciones</p>
+        <h1>Flujo de liquidación</h1>
+        <p class="slint-subtitulo">
+          Seleccione uno de los cuatro ejemplos precargados para recorrer el
+          desglose visual. Los valores no se calculan en tiempo real.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Demostración frontend:</strong> los ejemplos L-01 a L-04 son
+          datos ficticios precargados. No son liquidaciones legales ni cálculos
+          automáticos de los turnos registrados en INT-03.
+        </span>
+      </div>
+
+      <div id="aviso-flujo" class="slint-mt-4" aria-live="polite"></div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-seleccion">
+        <h2 id="titulo-seleccion">Selección del ejemplo</h2>
+        <div class="slint-panel slint-mt-3" id="panel-seleccion">
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="turno-select">Ejemplo de liquidación</label>
+            <select class="slint-campo__control" id="turno-select"></select>
+            <p class="slint-campo__ayuda">
+              Cuatro escenarios ilustrativos: diurno, nocturno, sábado a domingo y con horas extra.
+            </p>
+          </div>
+
+          <div id="estado-turno" class="slint-mt-4"></div>
+
+          <div class="slint-formulario__acciones slint-mt-4">
+            <button class="slint-boton" type="button" id="btn-usar">
+              Usar esta liquidación
+            </button>
+            <a class="slint-boton slint-boton--secundario" href="consulta-turnos.html">Volver a consulta</a>
+          </div>
+        </div>
+      </section>
+
+      <div id="resultado-flujo" class="slint-mt-4" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — plantilla base del prototipo frontend académico.">
+  <title>SLINT · Plantilla base</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    PLANTILLA BASE
+    --------------
+    Esta página es la referencia canónica de estructura. No se hereda
+    automáticamente en HTML estático: cada interfaz copia este esqueleto
+    y cambia el atributo data-pagina.
+
+    Atributos de <body>:
+      data-pagina="INT-XX"  -> identifica la interfaz y marca el menú activo.
+      data-menu="true|false" -> muestra u oculta el menú lateral.
+      data-demo="true|false" -> muestra el aviso de datos ficticios.
+
+    El header, el menú, las migas y el pie se generan desde
+    js/nucleo/componentes.js. No se duplican a mano en cada página.
+  -->
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+</head>
+<body data-pagina="PLANTILLA" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Referencia interna</p>
+        <h1>Plantilla base</h1>
+        <p class="slint-subtitulo">
+          Estructura común para las 16 interfaces de SLINT. Copia este esqueleto,
+          ajusta <code>data-pagina</code> y agrega el contenido dentro de
+          <code>&lt;main&gt;</code>.
+        </p>
+      </header>
+
+      <section class="slint-seccion" aria-labelledby="titulo-pasos">
+        <h2 id="titulo-pasos">Pasos para crear una interfaz</h2>
+        <div class="slint-panel slint-mt-3">
+          <ol class="slint-lista-pendientes">
+            <li><span class="slint-badge slint-badge--neutro">1</span> Copiar esta plantilla como <code>nombre-pagina.html</code>.</li>
+            <li><span class="slint-badge slint-badge--neutro">2</span> Cambiar <code>data-pagina</code> por el código INT correspondiente.</li>
+            <li><span class="slint-badge slint-badge--neutro">3</span> Escribir el contenido semántico dentro de <code>&lt;main id="contenido"&gt;</code>.</li>
+            <li><span class="slint-badge slint-badge--neutro">4</span> Agregar el script de página en <code>js/paginas/</code> con <code>defer</code>.</li>
+            <li><span class="slint-badge slint-badge--neutro">5</span> Reutilizar las clases de <code>styles.css</code> y los componentes de <code>componentes.html</code>.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-ejemplo">
+        <h2 id="titulo-ejemplo">Ejemplo de bloque</h2>
+        <div class="slint-tarjeta slint-mt-3">
+          <h3 class="slint-tarjeta__titulo">Título del bloque</h3>
+          <p class="slint-tarjeta__texto">
+            Texto de ejemplo. Reemplace este contenido por el de la interfaz.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

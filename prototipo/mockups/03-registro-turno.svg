@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-03 Registro de turno (único, 2.º tramo opcional)</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <text x="24" y="100" font-size="16" font-weight="bold" fill="#333">Datos del turno</text>
+
+  <text x="24" y="140" font-size="14" fill="#444">Colaborador *</text>
+  <rect x="24" y="150" width="340" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="36" y="174" font-size="13" fill="#aaa">Seleccione colaborador</text>
+
+  <text x="392" y="140" font-size="14" fill="#444">Fecha de inicio del turno *</text>
+  <rect x="392" y="150" width="200" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="404" y="174" font-size="13" fill="#aaa">dd/mm/aaaa</text>
+  <text x="608" y="168" font-size="11" fill="#777">Aplica a la entrada 1</text>
+
+  <rect x="24" y="212" width="740" height="182" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="242" font-size="15" font-weight="bold" fill="#333">Tramo 1</text>
+
+  <text x="40" y="280" font-size="13" fill="#444">Entrada 1 *</text>
+  <rect x="40" y="290" width="180" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="52" y="314" font-size="13" fill="#aaa">HH:MM</text>
+
+  <text x="250" y="280" font-size="13" fill="#444">Salida 1 *</text>
+  <rect x="250" y="290" width="180" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="262" y="314" font-size="13" fill="#aaa">HH:MM</text>
+
+  <rect x="460" y="298" width="18" height="18" fill="#fff" stroke="#9a9a9a"/>
+  <text x="488" y="313" font-size="13" fill="#444">La salida 1 es del día siguiente</text>
+  <text x="488" y="333" font-size="11" fill="#777">Si se marca, la fecha de salida = fecha de inicio + 1 día</text>
+
+  <rect x="24" y="410" width="740" height="182" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="440" font-size="15" font-weight="bold" fill="#333">Tramo 2 (opcional)</text>
+
+  <text x="40" y="478" font-size="13" fill="#444">Entrada 2</text>
+  <rect x="40" y="488" width="180" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="52" y="512" font-size="13" fill="#aaa">HH:MM</text>
+
+  <text x="250" y="478" font-size="13" fill="#444">Salida 2</text>
+  <rect x="250" y="488" width="180" height="36" fill="#fff" stroke="#9a9a9a"/>
+  <text x="262" y="512" font-size="13" fill="#aaa">HH:MM</text>
+
+  <rect x="460" y="496" width="18" height="18" fill="#fff" stroke="#9a9a9a"/>
+  <text x="488" y="511" font-size="13" fill="#444">La salida 2 es del día siguiente</text>
+  <text x="488" y="531" font-size="11" fill="#777">La entrada 2 se ubica en la fecha de fin del tramo 1</text>
+
+  <rect x="792" y="212" width="464" height="380" rx="6" fill="#eef3f8" stroke="#7e9ab5"/>
+  <text x="808" y="242" font-size="14" font-weight="bold" fill="#33475b">Regla de determinación de fechas</text>
+  <text x="808" y="272" font-size="12" fill="#33475b">1. La fecha de inicio aplica a la entrada 1.</text>
+  <text x="808" y="294" font-size="12" fill="#33475b">2. Cada salida usa la fecha de inicio; si se marca</text>
+  <text x="818" y="312" font-size="12" fill="#33475b">"día siguiente", se suma 1 día natural.</text>
+  <text x="808" y="334" font-size="12" fill="#33475b">3. La entrada 2 se ubica en la fecha de fin del</text>
+  <text x="818" y="352" font-size="12" fill="#33475b">tramo 1 (no en una fecha independiente).</text>
+  <text x="808" y="374" font-size="12" fill="#33475b">4. Si la salida 2 es del día siguiente, se suma</text>
+  <text x="818" y="392" font-size="12" fill="#33475b">1 día a la fecha de fin del tramo 1.</text>
+
+  <text x="808" y="426" font-size="12" font-weight="bold" fill="#33475b">Ejemplo con fechas ficticias</text>
+  <text x="808" y="448" font-size="11" fill="#44586e">Tramo 1: 05/01/2099 22:00 → 06/01/2099 06:00</text>
+  <text x="808" y="466" font-size="11" fill="#44586e">Tramo 2: 06/01/2099 14:00 → 06/01/2099 18:00</text>
+  <text x="808" y="492" font-size="11" fill="#44586e">El ejemplo muestra un cruce de medianoche en el</text>
+  <text x="808" y="508" font-size="11" fill="#44586e">tramo 1 sin ambigüedad de fecha.</text>
+
+  <text x="808" y="540" font-size="11" fill="#556b80">Los tramos se ordenan y validan en la línea de</text>
+  <text x="808" y="556" font-size="11" fill="#556b80">tiempo absoluta; no se asume inválido por hora.</text>
+
+  <rect x="24" y="628" width="240" height="42" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="144" y="655" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Registrar turno</text>
+
+  <rect x="288" y="628" width="300" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="438" y="655" text-anchor="middle" font-size="13" fill="#555">¿Prefiere cargar un archivo? Importar</text>
+
+  <rect x="24" y="690" width="1232" height="58" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="714" font-size="12" fill="#7a4a4a">Validaciones: colaborador y fecha obligatorios; entrada y salida del tramo 1; el tramo 2 es opcional y, si se activa, exige entrada y salida.</text>
+  <text x="40" y="734" font-size="12" fill="#7a4a4a">Tramos sin solapamiento en la línea de tiempo absoluta. El turno se guarda solo en memoria (demo), sin persistencia.</text>
+</svg>

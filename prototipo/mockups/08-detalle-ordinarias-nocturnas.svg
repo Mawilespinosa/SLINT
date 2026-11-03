@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-08 Detalle de horas ordinarias y nocturnas</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <text x="24" y="104" font-size="15" font-weight="bold" fill="#333">Distribución por tramo</text>
+
+  <rect x="24" y="124" width="1232" height="300" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="168" x2="1256" y2="168" stroke="#bbb"/>
+  <text x="40" y="152" font-size="13" font-weight="bold" fill="#444">Tramo</text>
+  <text x="180" y="152" font-size="13" font-weight="bold" fill="#444">Rango</text>
+  <text x="480" y="152" font-size="13" font-weight="bold" fill="#444">Horas ordinarias</text>
+  <text x="760" y="152" font-size="13" font-weight="bold" fill="#444">Horas nocturnas</text>
+  <text x="1020" y="152" font-size="13" font-weight="bold" fill="#444">Total</text>
+
+  <text x="40" y="204" font-size="13" fill="#444">Tramo 1</text><text x="180" y="204" font-size="13" fill="#444">22:00 – 06:00 (+1)</text><text x="480" y="204" font-size="13" fill="#444">2.0</text><text x="760" y="204" font-size="13" fill="#444">6.0</text><text x="1020" y="204" font-size="13" fill="#444">8.0</text>
+
+  <rect x="24" y="240" width="1232" height="46" fill="#f2f2f2" stroke="#d0d0d0"/>
+  <text x="40" y="269" font-size="12" fill="#555">21:00</text>
+  <rect x="130" y="248" width="300" height="30" fill="#dcdcdc" stroke="#9a9a9a"/>
+  <text x="280" y="269" text-anchor="middle" font-size="11" fill="#444">Franja nocturna</text>
+  <text x="470" y="269" font-size="12" fill="#555">06:00</text>
+  <line x1="124" y1="263" x2="1256" y2="263" stroke="#c0c0c0" stroke-dasharray="5 4"/>
+
+  <text x="24" y="330" font-size="12" fill="#666">El turno cruza la medianoche: 22:00 del día 1 hasta 06:00 del día 2.</text>
+
+  <rect x="24" y="456" width="600" height="170" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="486" font-size="14" font-weight="bold" fill="#333">Parámetros aplicados</text>
+  <text x="40" y="516" font-size="12" fill="#555">Inicio de franja nocturna: 21:00</text>
+  <text x="40" y="538" font-size="12" fill="#555">Fin de franja nocturna: 06:00</text>
+  <text x="40" y="560" font-size="12" fill="#555">Vigencia: datos de ejemplo (no verificada)</text>
+
+  <rect x="648" y="456" width="608" height="170" rx="6" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="664" y="486" font-size="14" font-weight="bold" fill="#7a4a4a">Nota de demostración</text>
+  <text x="664" y="516" font-size="12" fill="#7a4a4a">Si no hay parámetros configurados, se muestra</text>
+  <text x="664" y="538" font-size="12" fill="#7a4a4a">el aviso "datos de ejemplo".</text>
+  <text x="664" y="560" font-size="12" fill="#7a4a4a">No es una liquidación legal verificada.</text>
+
+  <rect x="24" y="650" width="260" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="154" y="677" text-anchor="middle" font-size="13" fill="#555">Volver al flujo (INT-07)</text>
+</svg>

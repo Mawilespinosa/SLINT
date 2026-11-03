@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — usuarios, roles y permisos de demostración.">
+  <title>SLINT · Usuarios y roles</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/administracion-demo.js" defer></script>
+  <script src="js/paginas/usuarios-roles.js" defer></script>
+</head>
+<body data-pagina="INT-15" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+  <header id="slint-cabecera"></header>
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Administración</p>
+        <h1>Usuarios y roles</h1>
+        <p class="slint-subtitulo">
+          Consulta de usuarios ficticios, permisos por rol y formulario con
+          validación frontend. Sin persistencia ni CRUD real.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Demostración visual:</strong> no hay base de datos, autenticación
+          real ni creación de usuarios. El formulario solo valida en el navegador.
+        </span>
+      </div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-usuarios">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-usuarios">Usuarios ficticios</h2>
+          <span class="slint-badge slint-badge--neutro" id="contador-usuarios">0 usuarios</span>
+        </div>
+        <div id="tabla-usuarios" class="slint-tabla-contenedor"></div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-roles">
+        <h2 id="titulo-roles">Roles y permisos</h2>
+        <div id="lista-roles" class="slint-grid slint-grid--dos slint-mt-3"></div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Nuevo usuario (demo)</h2>
+        <div class="slint-panel slint-mt-3">
+          <div id="mensaje-usuario" aria-live="polite"></div>
+
+          <form id="form-usuario" class="slint-formulario slint-formulario--dos-columnas" novalidate>
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="usuario-nombre">
+                Nombre <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="usuario-nombre" type="text" required
+                     aria-required="true" aria-describedby="error-usuario-nombre">
+              <p class="slint-campo__error" id="error-usuario-nombre" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="usuario-correo">
+                Correo <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input class="slint-campo__control" id="usuario-correo" type="email" required
+                     aria-required="true" aria-describedby="error-usuario-correo">
+              <p class="slint-campo__error" id="error-usuario-correo" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="usuario-rol">
+                Rol <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <select class="slint-campo__control" id="usuario-rol" required
+                      aria-required="true" aria-describedby="error-usuario-rol">
+                <option value="">Seleccione un rol</option>
+              </select>
+              <p class="slint-campo__error" id="error-usuario-rol" hidden></p>
+            </div>
+
+            <div class="slint-formulario__acciones">
+              <button class="slint-boton" type="submit">Guardar (demo)</button>
+              <a class="slint-boton slint-boton--secundario" href="parametros-laborales.html">Ir a parámetros (INT-16)</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer id="slint-pie"></footer>
+</body>
+</html>

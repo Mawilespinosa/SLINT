@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — acceso de demostración al prototipo de liquidación de turnos.">
+  <title>SLINT · Acceso</title>
+  <link rel="stylesheet" href="styles.css?v=20261030-1">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/paginas/acceso.js" defer></script>
+</head>
+<body data-pagina="INT-01" data-menu="false" data-demo="false">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout slint-layout--acceso">
+    <main id="contenido" class="slint-acceso" tabindex="-1">
+      <section class="slint-tarjeta slint-acceso__tarjeta" aria-labelledby="titulo-acceso">
+        <div class="slint-acceso__presentacion">
+          <div class="slint-acceso__marca">
+            <span class="slint-acceso__sigla">SLINT</span>
+            <span class="slint-badge slint-badge--demo">DEMO</span>
+          </div>
+          <h1 id="titulo-acceso">Iniciar sesión</h1>
+          <p class="slint-acceso__descripcion">
+            Sistema de liquidación de turnos laborales. Prototipo académico con datos ficticios.
+          </p>
+        </div>
+
+        <div class="slint-acceso__panel">
+          <div id="mensaje-acceso" aria-live="assertive"></div>
+
+          <form id="form-acceso" class="slint-formulario" novalidate>
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="usuario">
+                Usuario <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="slint-campo__control"
+                id="usuario"
+                name="usuario"
+                type="text"
+                autocomplete="username"
+                required
+                aria-required="true"
+                aria-describedby="error-usuario ayuda-usuario"
+              >
+              <p class="slint-campo__ayuda" id="ayuda-usuario">Usuario de demostración.</p>
+              <p class="slint-campo__error" id="error-usuario" hidden></p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="contrasena">
+                Contraseña <span class="slint-campo__requerido" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="slint-campo__control"
+                id="contrasena"
+                name="contrasena"
+                type="password"
+                autocomplete="current-password"
+                required
+                aria-required="true"
+                aria-describedby="error-contrasena"
+              >
+              <p class="slint-campo__error" id="error-contrasena" hidden></p>
+            </div>
+
+            <button class="slint-boton" type="submit">Ingresar</button>
+          </form>
+        </div>
+
+        <div class="slint-acceso__pie">
+          <div class="slint-acceso__credenciales">
+            <p><strong>Credenciales de demostración:</strong></p>
+            <p>Usuario: <code>aprendiz</code> · Contraseña: <code>slint2026</code></p>
+          </div>
+
+          <p class="slint-acceso__nota">
+            Esta pantalla es una simulación. No existe autenticación real contra un servidor,
+            no se envía información a ningún servicio y no se almacenan contraseñas.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

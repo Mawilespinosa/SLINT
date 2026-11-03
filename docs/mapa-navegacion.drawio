@@ -1,0 +1,209 @@
+<mxfile host="app.diagrams.net" modified="2026-10-26T00:00:00.000Z" agent="OpenCode" version="21.0.0" type="device">
+  <diagram id="slint-mapa-navegacion" name="Mapa de navegación SLINT">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Contenedores de módulo -->
+        <mxCell id="modAcceso" value="ACCESO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="modDash" value="DASHBOARD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="modAdmin" value="ADMINISTRACIÓN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="modTurnos" value="GESTIÓN DE TURNOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="1040" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="modRep" value="REPORTES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="320" width="360" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="modLiq" value="LIQUIDACIONES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="1200" height="420" as="geometry" />
+        </mxCell>
+
+        <!-- #1 Acceso -->
+        <mxCell id="int1" value="#1 Acceso / identificación demo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #2 Dashboard -->
+        <mxCell id="int2" value="#2 Dashboard de indicadores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="130" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #15 Usuarios y roles -->
+        <mxCell id="int15" value="#15 Usuarios y roles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="120" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- #16 Parámetros laborales -->
+        <mxCell id="int16" value="#16 Parámetros laborales" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="120" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- #3 Registro de turno -->
+        <mxCell id="int3" value="#3 Registro de turno&#10;(único, 2.º tramo opcional)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #4 Validación de horarios -->
+        <mxCell id="int4" value="#4 Validación de horarios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #5 Consulta de turnos -->
+        <mxCell id="int5" value="#5 Consulta de turnos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="570" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #6 Importar turnos -->
+        <mxCell id="int6" value="#6 Importar turnos desde Excel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #7 Flujo liquidación -->
+        <mxCell id="int7" value="#7 Flujo de liquidación&#10;(clasificación integrada)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="720" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #8 Detalle OH -->
+        <mxCell id="int8" value="#8 Detalle horas&#10;ordinarias y nocturnas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="840" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #9 Detalle HE -->
+        <mxCell id="int9" value="#9 Detalle horas extra" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="840" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #10 Detalle festivos -->
+        <mxCell id="int10" value="#10 Detalle domingos&#10;y festivos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="570" y="840" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #11 Resumen liquidación -->
+        <mxCell id="int11" value="#11 Resumen de liquidación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="720" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #12 Detalle por concepto -->
+        <mxCell id="int12" value="#12 Detalle de liquidación&#10;por concepto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="840" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #13 Exportación -->
+        <mxCell id="int13" value="#13 Exportación de resultados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- #14 Historial liquidaciones -->
+        <mxCell id="int14" value="#14 Historial de liquidaciones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="490" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Flujo principal Acceso -> Dashboard -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="int1" target="int2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dashboard a módulos (menú global) -->
+        <mxCell id="e2" value="Menú: Turnos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#82b366;fontSize=10;" edge="1" parent="1" source="int2" target="int3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Menú: Liquidaciones" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d79b00;fontSize=10;" edge="1" parent="1" source="int2" target="int7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Menú: Reportes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#9673a6;fontSize=10;" edge="1" parent="1" source="int2" target="int13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Menú: Administración" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="int2" target="int15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Flujo Gestión de turnos -->
+        <mxCell id="e6" value="Registrar / validar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int3" target="int4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="Consultar turnos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int4" target="int5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="Importar desde consulta" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int5" target="int6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7b" value="Importar desde registro" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="int3" target="int6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="Liquidar turno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d79b00;fontSize=10;" edge="1" parent="1" source="int5" target="int7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Flujo Liquidaciones -->
+        <mxCell id="e10" value="Detalle OH" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int7" target="int8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10b" value="Volver" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="int8" target="int7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="Detalle HE" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int7" target="int9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11b" value="Volver" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int9" target="int7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="Detalle festivos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int7" target="int10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12b" value="Volver" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int10" target="int7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="Continuar a resumen" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d79b00;fontSize=10;" edge="1" parent="1" source="int7" target="int11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="Ver detalle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int11" target="int12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14b" value="Volver al resumen" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int12" target="int11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Rutas de retorno / continuación -->
+        <mxCell id="e15" value="Exportar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int11" target="int13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15b" value="Volver al resumen" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int13" target="int11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="Ver historial" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int11" target="int14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16b" value="Volver al resumen" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int14" target="int11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="Menú Reportes (directo)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="int2" target="int14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Administración interna -->
+        <mxCell id="e18" value="Parámetros" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="int15" target="int16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="Volver al dashboard" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int16" target="int2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19b" value="Volver al dashboard" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="int15" target="int2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Leyenda -->
+        <mxCell id="leyenda" value="LEYENDA&#10;&#10;Azul = Acceso / Dashboard&#10;Verde = Gestión de turnos&#10;Naranja = Liquidaciones&#10;Morado = Reportes&#10;Amarillo = Administración&#10;&#10;Flecha gruesa = flujo principal&#10;Flecha fina = navegación secundaria&#10;Flecha punteada = retorno / ruta alternativa&#10;&#10;MENÚ GLOBAL&#10;Tras iniciar sesión, todas las pantallas&#10;comparten un menú superior con acceso a:&#10;Turnos · Liquidaciones · Reportes ·&#10;Administración · Dashboard.&#10;Las flechas punteadas muestran retornos&#10;específicos además del menú global." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="660" width="220" height="260" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

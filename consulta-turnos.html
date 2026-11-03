@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — consulta y filtrado de turnos de demostración.">
+  <title>SLINT · Consulta de turnos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/nucleo/turnos.js" defer></script>
+  <script src="js/paginas/consulta-turnos.js" defer></script>
+</head>
+<body data-pagina="INT-05" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <div class="slint-seccion__cabecera">
+          <div>
+            <p class="slint-sobretitulo">Gestión de turnos</p>
+            <h1>Consulta de turnos</h1>
+          </div>
+          <div class="slint-flex">
+            <a class="slint-boton" href="registro-turno.html">Registrar turno (INT-03)</a>
+            <a class="slint-boton slint-boton--secundario" href="importar-excel.html">Importar Excel (INT-06)</a>
+          </div>
+        </div>
+        <p class="slint-subtitulo">
+          Turnos de demostración y registros guardados temporalmente en esta sesión.
+        </p>
+      </header>
+
+      <div id="flash-turnos" aria-live="polite"></div>
+
+      <form id="filtros-turnos" class="slint-panel" novalidate>
+        <div class="slint-filtros">
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-colaborador">Colaborador</label>
+            <select class="slint-campo__control" id="filtro-colaborador">
+              <option value="">Todos</option>
+            </select>
+          </div>
+
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-fecha">Fecha</label>
+            <input class="slint-campo__control" id="filtro-fecha" type="date">
+          </div>
+
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-tipo">Tipo de turno</label>
+            <select class="slint-campo__control" id="filtro-tipo">
+              <option value="">Todos</option>
+              <option value="continuo">Continuo</option>
+              <option value="partido">Partido</option>
+            </select>
+          </div>
+
+          <div class="slint-filtros__acciones">
+            <button class="slint-boton" type="submit">Filtrar</button>
+            <button class="slint-boton slint-boton--secundario" type="reset">Limpiar</button>
+          </div>
+        </div>
+      </form>
+
+      <section class="slint-seccion" aria-labelledby="titulo-resultados">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-resultados">Resultados</h2>
+          <span class="slint-badge slint-badge--neutro" id="contador-turnos">0 turnos</span>
+        </div>
+
+        <div id="tabla-turnos" class="slint-tabla-contenedor"></div>
+
+        <div id="sin-resultados" class="slint-vacio" hidden>
+          <h3 class="slint-vacio__titulo">No hay turnos para los filtros seleccionados</h3>
+          <p>Ajuste los filtros o registre un nuevo turno de demostración.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

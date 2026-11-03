@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — exportación de liquidaciones de demostración a CSV.">
+  <title>SLINT · Exportación de resultados</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/datos/liquidaciones-demo.js" defer></script>
+  <script src="js/paginas/exportacion.js" defer></script>
+</head>
+<body data-pagina="INT-13" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+  <header id="slint-cabecera"></header>
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Reportes</p>
+        <h1>Exportación de resultados</h1>
+        <p class="slint-subtitulo">
+          Filtre los ejemplos de liquidación y descargue un CSV generado en el
+          navegador. Los datos son ficticios.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Exportación de demostración:</strong> el archivo se genera con
+          datos ficticios y no proviene de una base de datos ni de un backend.
+        </span>
+      </div>
+
+      <form id="filtros-exportacion" class="slint-panel slint-mt-4" novalidate>
+        <div class="slint-filtros">
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-colaborador">Colaborador</label>
+            <select class="slint-campo__control" id="filtro-colaborador">
+              <option value="">Todos</option>
+            </select>
+          </div>
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-desde">Desde</label>
+            <input class="slint-campo__control" id="filtro-desde" type="date">
+          </div>
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="filtro-hasta">Hasta</label>
+            <input class="slint-campo__control" id="filtro-hasta" type="date">
+          </div>
+          <div class="slint-filtros__acciones">
+            <button class="slint-boton" type="submit">Filtrar</button>
+            <button class="slint-boton slint-boton--secundario" type="reset">Limpiar</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="mensaje-exportacion" class="slint-mt-4" aria-live="polite"></div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-previa">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-previa">Vista previa</h2>
+          <span class="slint-badge slint-badge--neutro" id="contador-exportacion">0 registros</span>
+        </div>
+        <div id="tabla-exportacion" class="slint-tabla-contenedor"></div>
+        <div id="sin-exportacion" class="slint-vacio" hidden>
+          <h3 class="slint-vacio__titulo">No hay liquidaciones para los filtros seleccionados</h3>
+          <p>Ajuste los filtros o consulte el historial de ejemplos.</p>
+        </div>
+      </section>
+
+      <div class="slint-flex slint-mt-4">
+        <button class="slint-boton" type="button" id="btn-csv">Descargar CSV (demo)</button>
+        <a class="slint-boton slint-boton--secundario" href="historial-liquidaciones.html">Ver historial (INT-14)</a>
+      </div>
+
+      <p class="slint-texto-suave slint-mt-4">
+        El CSV usa separador punto y coma, incluye BOM UTF-8 y neutraliza valores
+        que podrían interpretarse como fórmulas en una hoja de cálculo.
+      </p>
+    </main>
+  </div>
+  <footer id="slint-pie"></footer>
+</body>
+</html>

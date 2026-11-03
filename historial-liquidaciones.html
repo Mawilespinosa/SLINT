@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — historial de liquidaciones de demostración.">
+  <title>SLINT · Historial de liquidaciones</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/datos/liquidaciones-demo.js" defer></script>
+  <script src="js/paginas/liquidacion-comun.js" defer></script>
+  <script src="js/paginas/historial-liquidaciones.js" defer></script>
+</head>
+<body data-pagina="INT-14" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+  <header id="slint-cabecera"></header>
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Reportes</p>
+        <h1>Historial de liquidaciones</h1>
+        <p class="slint-subtitulo">
+          Cuatro ejemplos de liquidación disponibles para consultar o exportar.
+          No hay persistencia en base de datos.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Historial de demostración:</strong> los registros son ficticios
+          y se cargan siempre desde el archivo de ejemplos.
+        </span>
+      </div>
+
+      <form id="filtros-historial" class="slint-panel slint-mt-4" novalidate>
+        <div class="slint-filtros">
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="historial-colaborador">Colaborador</label>
+            <select class="slint-campo__control" id="historial-colaborador">
+              <option value="">Todos</option>
+            </select>
+          </div>
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="historial-desde">Desde</label>
+            <input class="slint-campo__control" id="historial-desde" type="date">
+          </div>
+          <div class="slint-campo">
+            <label class="slint-campo__label" for="historial-hasta">Hasta</label>
+            <input class="slint-campo__control" id="historial-hasta" type="date">
+          </div>
+          <div class="slint-filtros__acciones">
+            <button class="slint-boton" type="submit">Filtrar</button>
+            <button class="slint-boton slint-boton--secundario" type="reset">Limpiar</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="mensaje-historial" class="slint-mt-4" aria-live="polite"></div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-historial">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-historial">Liquidaciones de ejemplo</h2>
+          <span class="slint-badge slint-badge--neutro" id="contador-historial">0 registros</span>
+        </div>
+        <div id="tabla-historial" class="slint-tabla-contenedor"></div>
+        <div id="sin-historial" class="slint-vacio" hidden>
+          <h3 class="slint-vacio__titulo">No hay liquidaciones para los filtros seleccionados</h3>
+          <p>Ajuste los filtros para ver los cuatro ejemplos disponibles.</p>
+        </div>
+      </section>
+
+      <div class="slint-flex slint-mt-4">
+        <a class="slint-boton slint-boton--secundario" href="exportacion.html">Ir a exportación (INT-13)</a>
+        <a class="slint-boton slint-boton--secundario" href="flujo-liquidacion.html">Ver flujo de liquidación (INT-07)</a>
+      </div>
+    </main>
+  </div>
+  <footer id="slint-pie"></footer>
+</body>
+</html>

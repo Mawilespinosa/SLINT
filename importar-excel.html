@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — importación simulada de turnos desde Excel, sin procesar contenido real.">
+  <title>SLINT · Importar turnos desde Excel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/nucleo/turnos.js" defer></script>
+  <script src="js/paginas/importar-excel.js" defer></script>
+</head>
+<body data-pagina="INT-06" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Gestión de turnos</p>
+        <h1>Importar turnos desde Excel</h1>
+        <p class="slint-subtitulo">
+          Esta pantalla valida la selección y la extensión del archivo. El contenido
+          no se lee, no se analiza y no se importa.
+        </p>
+      </header>
+
+      <div class="slint-mensaje slint-mensaje--demo" role="note">
+        <span>
+          <strong>Simulación:</strong> la vista previa usa datos ficticios y la
+          confirmación no agrega turnos reales a la consulta.
+        </span>
+      </div>
+
+      <section class="slint-seccion" aria-labelledby="titulo-archivo">
+        <h2 id="titulo-archivo">Selección del archivo</h2>
+        <div class="slint-panel slint-mt-3">
+          <div class="slint-archivo">
+            <label class="slint-campo__label" for="archivo">Archivo de turnos</label>
+            <input
+              id="archivo"
+              type="file"
+              accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+              aria-describedby="ayuda-archivo error-archivo"
+            >
+            <p class="slint-campo__ayuda" id="ayuda-archivo">
+              Formatos permitidos: <code>.xlsx</code> y <code>.xls</code>. Tamaño máximo: 5 MB.
+            </p>
+            <p class="slint-campo__error" id="error-archivo" hidden></p>
+            <p class="slint-archivo__info" id="archivo-info"></p>
+          </div>
+
+          <div id="mensaje-importacion" class="slint-mt-3" aria-live="polite"></div>
+
+          <div class="slint-formulario__acciones slint-mt-3">
+            <button class="slint-boton" type="button" id="btn-confirmar" disabled>
+              Confirmar importación (demo)
+            </button>
+            <a class="slint-boton slint-boton--secundario" href="consulta-turnos.html">Volver a consulta (INT-05)</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="slint-seccion" id="vista-previa" aria-labelledby="titulo-previa" hidden>
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-previa">Vista previa simulada</h2>
+          <span class="slint-badge slint-badge--demo">Datos ficticios</span>
+        </div>
+        <div class="slint-panel">
+          <div class="slint-tabla-contenedor">
+            <table class="slint-tabla slint-tabla--apilada" id="tabla-previa">
+              <caption>Filas de ejemplo: el contenido del archivo no se procesó</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Fila</th>
+                  <th scope="col">Colaborador</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Entrada</th>
+                  <th scope="col">Salida</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-label="Fila">1</th>
+                  <td data-label="Colaborador">Colaborador Demo A</td>
+                  <td data-label="Fecha">05/01/2099</td>
+                  <td data-label="Entrada">08:00</td>
+                  <td data-label="Salida">16:00</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--valido">Válida</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Fila">2</th>
+                  <td data-label="Colaborador">Colaborador Demo B</td>
+                  <td data-label="Fecha">06/01/2099</td>
+                  <td data-label="Entrada">22:00</td>
+                  <td data-label="Salida">06:00</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--valido">Válida</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Fila">3</th>
+                  <td data-label="Colaborador">Colaborador Demo C</td>
+                  <td data-label="Fecha">07/01/2099</td>
+                  <td data-label="Entrada">06:00</td>
+                  <td data-label="Salida">—</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--error">Con error</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Fila">4</th>
+                  <td data-label="Colaborador">Colaborador Demo D</td>
+                  <td data-label="Fecha">08/01/2099</td>
+                  <td data-label="Entrada">08:00</td>
+                  <td data-label="Salida">12:00</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--valido">Válida</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Fila">5</th>
+                  <td data-label="Colaborador">Colaborador Demo E</td>
+                  <td data-label="Fecha">09/01/2099</td>
+                  <td data-label="Entrada">14:00</td>
+                  <td data-label="Salida">22:00</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--neutro">No procesada</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="slint-texto-suave slint-mt-3">
+            Vista previa simulada: el archivo seleccionado no se lee ni se convierte
+            en registros de turnos.
+          </p>
+        </div>
+      </section>
+
+      <div id="resultado-importacion" class="slint-mt-4" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

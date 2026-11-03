@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-02 Dashboard de indicadores</text>
+  <text x="760" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <rect x="24" y="88" width="288" height="110" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="118" font-size="13" fill="#555">Turnos registrados</text>
+  <text x="40" y="165" font-size="34" font-weight="bold" fill="#333">128</text>
+
+  <rect x="336" y="88" width="288" height="110" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="352" y="118" font-size="13" fill="#555">Liquidaciones pendientes</text>
+  <text x="352" y="165" font-size="34" font-weight="bold" fill="#333">12</text>
+
+  <rect x="648" y="88" width="288" height="110" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="664" y="118" font-size="13" fill="#555">Horas extra acumuladas</text>
+  <text x="664" y="165" font-size="34" font-weight="bold" fill="#333">46.5</text>
+
+  <rect x="960" y="88" width="296" height="110" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="976" y="118" font-size="13" fill="#555">Festivos del período</text>
+  <text x="976" y="165" font-size="34" font-weight="bold" fill="#333">3</text>
+
+  <rect x="24" y="226" width="600" height="400" rx="6" fill="#fafafa" stroke="#9a9a9a"/>
+  <text x="40" y="256" font-size="15" font-weight="bold" fill="#333">Horas por tipo (gráfico)</text>
+  <line x1="70" y1="580" x2="590" y2="580" stroke="#bbb"/>
+  <line x1="70" y1="300" x2="70" y2="580" stroke="#bbb"/>
+  <rect x="110" y="430" width="60" height="150" fill="#cfcfcf" stroke="#8a8a8a"/>
+  <rect x="200" y="360" width="60" height="220" fill="#cfcfcf" stroke="#8a8a8a"/>
+  <rect x="290" y="480" width="60" height="100" fill="#cfcfcf" stroke="#8a8a8a"/>
+  <rect x="380" y="320" width="60" height="260" fill="#cfcfcf" stroke="#8a8a8a"/>
+  <rect x="470" y="500" width="60" height="80" fill="#cfcfcf" stroke="#8a8a8a"/>
+  <text x="140" y="600" font-size="11" fill="#666">Ord.</text>
+  <text x="225" y="600" font-size="11" fill="#666">Noct.</text>
+  <text x="315" y="600" font-size="11" fill="#666">E. diu.</text>
+  <text x="400" y="600" font-size="11" fill="#666">E. noc.</text>
+  <text x="495" y="600" font-size="11" fill="#666">Fest.</text>
+
+  <rect x="648" y="226" width="608" height="400" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="664" y="256" font-size="15" font-weight="bold" fill="#333">Alternativa textual del gráfico</text>
+  <line x1="664" y1="280" x2="1240" y2="280" stroke="#bbb"/>
+  <text x="664" y="310" font-size="13" fill="#555">Concepto</text>
+  <text x="900" y="310" font-size="13" fill="#555">Horas</text>
+  <text x="1100" y="310" font-size="13" fill="#555">Periodo</text>
+  <line x1="664" y1="322" x2="1240" y2="322" stroke="#ddd"/>
+  <text x="664" y="352" font-size="13" fill="#444">Ordinarias</text><text x="900" y="352" font-size="13" fill="#444">60.0</text><text x="1100" y="352" font-size="13" fill="#444">Mes</text>
+  <text x="664" y="386" font-size="13" fill="#444">Nocturnas</text><text x="900" y="386" font-size="13" fill="#444">38.5</text><text x="1100" y="386" font-size="13" fill="#444">Mes</text>
+  <text x="664" y="420" font-size="13" fill="#444">Extra diurnas</text><text x="900" y="420" font-size="13" fill="#444">18.0</text><text x="1100" y="420" font-size="13" fill="#444">Mes</text>
+  <text x="664" y="454" font-size="13" fill="#444">Extra nocturnas</text><text x="900" y="454" font-size="13" fill="#444">10.5</text><text x="1100" y="454" font-size="13" fill="#444">Mes</text>
+  <text x="664" y="488" font-size="13" fill="#444">Festivos</text><text x="900" y="488" font-size="13" fill="#444">12.0</text><text x="1100" y="488" font-size="13" fill="#444">Mes</text>
+
+  <rect x="24" y="650" width="1232" height="46" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="678" font-size="13" fill="#7a4a4a">Datos ficticios de demostración. Los indicadores no provienen de un sistema real.</text>
+</svg>

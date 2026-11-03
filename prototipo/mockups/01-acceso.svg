@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-01 Acceso / identificación demo</text>
+
+  <rect x="430" y="190" width="420" height="380" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="640" y="235" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Iniciar sesión (demo)</text>
+
+  <text x="470" y="285" font-size="14" fill="#444">Usuario</text>
+  <rect x="470" y="295" width="340" height="36" fill="#ffffff" stroke="#9a9a9a"/>
+  <text x="482" y="319" font-size="13" fill="#aaa">Ingrese usuario ficticio</text>
+
+  <text x="470" y="365" font-size="14" fill="#444">Contraseña</text>
+  <rect x="470" y="375" width="340" height="36" fill="#ffffff" stroke="#9a9a9a"/>
+  <text x="482" y="399" font-size="13" fill="#aaa">••••••••</text>
+
+  <rect x="470" y="435" width="340" height="40" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="640" y="461" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Ingresar</text>
+
+  <rect x="470" y="495" width="340" height="52" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="482" y="515" font-size="12" fill="#7a4a4a">Demostración: no existe autenticación real</text>
+  <text x="482" y="533" font-size="12" fill="#7a4a4a">contra un servidor. Credenciales ficticias.</text>
+
+  <text x="640" y="625" text-anchor="middle" font-size="12" fill="#888">Error esperado ante credenciales incorrectas: "Credenciales incorrectas (demo)"</text>
+</svg>

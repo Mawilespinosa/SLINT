@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — catálogo de componentes reutilizables del prototipo.">
+  <title>SLINT · Catálogo de componentes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+</head>
+<body data-pagina="COMPONENTES" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Guía interna</p>
+        <h1>Catálogo de componentes</h1>
+        <p class="slint-subtitulo">
+          Componentes HTML semánticos reutilizables, estilizados desde
+          <code>styles.css</code>. Esta página sirve como referencia y como prueba
+          visual de regresión.
+        </p>
+      </header>
+
+      <section class="slint-seccion" aria-labelledby="c-tipografia">
+        <h2 id="c-tipografia">Tipografía</h2>
+        <div class="slint-panel slint-mt-3">
+          <h1>Encabezado H1</h1>
+          <h2>Encabezado H2</h2>
+          <h3>Encabezado H3</h3>
+          <p class="slint-mt-2">
+            Párrafo base. Pila del sistema, sin fuentes externas. Texto secundario:
+            <span class="slint-texto-suave">así se ve la información de apoyo.</span>
+          </p>
+          <p class="slint-mt-2"><code>código en línea</code> y cifras tabulares: 1.234.567.</p>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-botones">
+        <h2 id="c-botones">Botones</h2>
+        <div class="slint-panel slint-mt-3">
+          <div class="slint-flex">
+            <button class="slint-boton" type="button">Primario</button>
+            <button class="slint-boton slint-boton--secundario" type="button">Secundario</button>
+            <button class="slint-boton slint-boton--peligro" type="button">Peligro</button>
+            <button class="slint-boton slint-boton--pequeno" type="button">Pequeño</button>
+            <button class="slint-boton" type="button" disabled>Deshabilitado</button>
+            <span class="slint-boton slint-boton--secundario is-pendiente" aria-disabled="true">Pendiente</span>
+          </div>
+          <p class="slint-texto-suave slint-mt-3">
+            Use <code>&lt;button&gt;</code> para acciones y <code>&lt;a&gt;</code> para navegación.
+            Enter y Espacio funcionan de forma nativa en los botones.
+          </p>
+          <pre class="slint-codigo"><code>&lt;button class="slint-boton" type="button"&gt;Primario&lt;/button&gt;
+&lt;a class="slint-boton slint-boton--secundario" href="dashboard.html"&gt;Secundario&lt;/a&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-campos">
+        <h2 id="c-campos">Campos de formulario</h2>
+        <div class="slint-panel slint-mt-3">
+          <form class="slint-formulario slint-formulario--dos-columnas" novalidate>
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="demo-nombre">Nombre <span class="slint-campo__requerido">*</span></label>
+              <input class="slint-campo__control" id="demo-nombre" type="text" aria-describedby="demo-nombre-ayuda">
+              <p class="slint-campo__ayuda" id="demo-nombre-ayuda">Texto de ayuda asociado al campo.</p>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="demo-rol">Rol</label>
+              <select class="slint-campo__control" id="demo-rol">
+                <option>Seleccione una opción</option>
+                <option>Auxiliar de nómina</option>
+                <option>Coordinador operativo</option>
+                <option>Administrador</option>
+              </select>
+            </div>
+
+            <div class="slint-campo">
+              <label class="slint-campo__label" for="demo-error">Campo con error</label>
+              <input class="slint-campo__control" id="demo-error" type="text" aria-invalid="true" aria-describedby="demo-error-mensaje">
+              <p class="slint-campo__error" id="demo-error-mensaje">Mensaje de error asociado.</p>
+            </div>
+
+            <div class="slint-check">
+              <input id="demo-check" type="checkbox">
+              <label class="slint-check__texto" for="demo-check">Opción de ejemplo</label>
+            </div>
+          </form>
+          <pre class="slint-codigo"><code>&lt;div class="slint-campo"&gt;
+  &lt;label class="slint-campo__label" for="usuario"&gt;Usuario&lt;/label&gt;
+  &lt;input class="slint-campo__control" id="usuario" type="text"
+         aria-describedby="error-usuario"&gt;
+  &lt;p class="slint-campo__error" id="error-usuario"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-mensajes">
+        <h2 id="c-mensajes">Mensajes y avisos</h2>
+        <div class="slint-panel slint-mt-3">
+          <div class="slint-mensaje slint-mensaje--info" role="status"><span><strong>Información:</strong> mensaje informativo.</span></div>
+          <div class="slint-mensaje slint-mensaje--exito" role="status"><span><strong>Éxito:</strong> operación completada en la demostración.</span></div>
+          <div class="slint-mensaje slint-mensaje--advertencia" role="status"><span><strong>Advertencia:</strong> revise los datos antes de continuar.</span></div>
+          <div class="slint-mensaje slint-mensaje--error" role="alert"><span><strong>Error:</strong> hay campos obligatorios sin completar.</span></div>
+          <div class="slint-mensaje slint-mensaje--demo" role="status"><span><strong>Demo:</strong> función simulada con datos ficticios.</span></div>
+          <pre class="slint-codigo"><code>&lt;div class="slint-mensaje slint-mensaje--error" role="alert"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-badges">
+        <h2 id="c-badges">Badges de estado</h2>
+        <div class="slint-panel slint-mt-3">
+          <div class="slint-flex">
+            <span class="slint-badge slint-badge--valido">Válido</span>
+            <span class="slint-badge slint-badge--advertencia">Advertencia</span>
+            <span class="slint-badge slint-badge--error">Error</span>
+            <span class="slint-badge slint-badge--neutro">Neutro</span>
+            <span class="slint-badge slint-badge--demo">DEMO</span>
+          </div>
+          <p class="slint-texto-suave slint-mt-3">
+            El estado siempre se comunica con texto, no solo con color.
+          </p>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-kpi">
+        <h2 id="c-kpi">Tarjetas KPI</h2>
+        <div class="slint-grid slint-grid--kpi slint-mt-3">
+          <article class="slint-kpi">
+            <p class="slint-kpi__etiqueta">Turnos registrados</p>
+            <strong class="slint-kpi__valor">4</strong>
+            <span class="slint-kpi__unidad">turnos · Enero 2099 · demo</span>
+          </article>
+          <article class="slint-kpi">
+            <p class="slint-kpi__etiqueta">Horas extra acumuladas</p>
+            <strong class="slint-kpi__valor">28,5</strong>
+            <span class="slint-kpi__unidad">horas · Enero 2099 · demo</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-tabla">
+        <h2 id="c-tabla">Tabla adaptable</h2>
+        <div class="slint-panel slint-mt-3">
+          <div class="slint-tabla-contenedor">
+            <table class="slint-tabla slint-tabla--numeros slint-tabla--apilada">
+              <caption>Turnos de demostración</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Colaborador</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Horas</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-label="Colaborador">Colaborador Demo A</th>
+                  <td data-label="Fecha">05/01/2099</td>
+                  <td data-label="Horas">8,0</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--valido">Válido</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Colaborador">Colaborador Demo B</th>
+                  <td data-label="Fecha">06/01/2099</td>
+                  <td data-label="Horas">—</td>
+                  <td data-label="Estado"><span class="slint-badge slint-badge--error">Con error</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="slint-texto-suave slint-mt-3">
+            En móvil se apilan las filas con <code>data-label</code>.
+          </p>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-turnos">
+        <h2 id="c-turnos">Formularios de turno y hallazgos</h2>
+        <div class="slint-panel slint-mt-3">
+          <fieldset class="slint-fieldset">
+            <legend class="slint-fieldset__leyenda">Tramo de ejemplo</legend>
+            <div class="slint-formulario slint-formulario--dos-columnas">
+              <div class="slint-campo">
+                <label class="slint-campo__label" for="demo-entrada">Entrada</label>
+                <input class="slint-campo__control" id="demo-entrada" type="time" step="60">
+              </div>
+              <div class="slint-campo">
+                <label class="slint-campo__label" for="demo-salida">Salida</label>
+                <input class="slint-campo__control" id="demo-salida" type="time" step="60">
+              </div>
+            </div>
+            <div class="slint-check">
+              <input id="demo-cruce" type="checkbox">
+              <label class="slint-check__texto" for="demo-cruce">La salida corresponde al día siguiente</label>
+            </div>
+          </fieldset>
+
+          <dl class="slint-resumen slint-mt-4">
+            <div class="slint-resumen__dato"><dt>Duración tramo 1</dt><dd>8 h</dd></div>
+            <div class="slint-resumen__dato"><dt>Duración total</dt><dd>8 h</dd></div>
+          </dl>
+
+          <div class="slint-hallazgos slint-mt-4">
+            <div class="slint-hallazgo slint-hallazgo--error" role="alert">
+              <span class="slint-badge slint-badge--error">Error</span>
+              <span>El tramo 2 se solapa con el tramo 1.</span>
+            </div>
+            <div class="slint-hallazgo slint-hallazgo--advertencia" role="status">
+              <span class="slint-badge slint-badge--advertencia">Advertencia</span>
+              <span>La duración supera el umbral de ejemplo de 17,5 h.</span>
+            </div>
+          </div>
+
+          <pre class="slint-codigo"><code>&lt;fieldset class="slint-fieldset"&gt;
+  &lt;legend class="slint-fieldset__leyenda"&gt;Tramo 1&lt;/legend&gt;
+  ...
+&lt;/fieldset&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-vacio">
+        <h2 id="c-vacio">Estado vacío</h2>
+        <div class="slint-vacio slint-mt-3">
+          <h3 class="slint-vacio__titulo">Sin resultados</h3>
+          <p>No hay registros para los filtros seleccionados.</p>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="c-dialogo">
+        <h2 id="c-dialogo">Diálogo nativo</h2>
+        <div class="slint-panel slint-mt-3">
+          <button class="slint-boton slint-boton--secundario" type="button" data-abrir-dialogo="dialogo-demo">
+            Abrir diálogo de ejemplo
+          </button>
+          <dialog class="slint-dialogo" id="dialogo-demo" aria-labelledby="titulo-dialogo">
+            <div class="slint-dialogo__cabecera">
+              <h2 id="titulo-dialogo">Confirmación de demostración</h2>
+            </div>
+            <div class="slint-dialogo__cuerpo">
+              <p>Este diálogo usa el elemento nativo <code>&lt;dialog&gt;</code>, sin librerías.</p>
+            </div>
+            <div class="slint-dialogo__pie">
+              <form method="dialog">
+                <button class="slint-boton slint-boton--secundario" type="submit">Cerrar</button>
+              </form>
+            </div>
+          </dialog>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

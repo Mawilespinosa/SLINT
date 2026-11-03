@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — dashboard de indicadores con datos ficticios de demostración.">
+  <title>SLINT · Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/paginas/dashboard.js" defer></script>
+</head>
+<body data-pagina="INT-02" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <div id="aviso-sesion"></div>
+
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Panel general</p>
+        <h1>Dashboard</h1>
+        <p class="slint-subtitulo">
+          Resumen de turnos y liquidaciones. Todos los valores son ficticios y
+          corresponden al período de demostración de enero de 2099.
+        </p>
+      </header>
+
+      <section class="slint-seccion" aria-labelledby="titulo-indicadores">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-indicadores">Indicadores</h2>
+          <span class="slint-badge slint-badge--neutro">Datos ficticios</span>
+        </div>
+        <div id="kpi-lista" class="slint-grid slint-grid--kpi"></div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-grafico">
+        <div class="slint-seccion__cabecera">
+          <h2 id="titulo-grafico">Horas por concepto</h2>
+          <span class="slint-badge slint-badge--neutro">Enero 2099 · demo</span>
+        </div>
+        <div class="slint-panel">
+          <p class="slint-texto-suave">
+            Gráfico construido con HTML y CSS, sin librerías externas. La tabla
+            inferior contiene la misma información en formato textual.
+          </p>
+          <div id="grafico" class="slint-grafico" role="img" aria-label="Gráfico de horas por concepto con datos de demostración"></div>
+          <div id="tabla-grafico" class="slint-tabla-contenedor slint-mt-4"></div>
+        </div>
+      </section>
+
+      <section class="slint-seccion" aria-labelledby="titulo-accesos">
+        <h2 id="titulo-accesos">Accesos rápidos</h2>
+        <div class="slint-panel slint-mt-3">
+          <p class="slint-texto-suave">
+            Accesos directos a los módulos implementados.
+          </p>
+          <ul class="slint-lista-pendientes slint-mt-3">
+            <li>
+              <a class="slint-boton slint-boton--secundario" href="registro-turno.html">Registrar turno</a>
+              <span class="slint-badge slint-badge--neutro">INT-03</span>
+            </li>
+            <li>
+              <a class="slint-boton slint-boton--secundario" href="consulta-turnos.html">Consultar turnos</a>
+              <span class="slint-badge slint-badge--neutro">INT-05</span>
+            </li>
+            <li>
+              <a class="slint-boton slint-boton--secundario" href="flujo-liquidacion.html">Ver liquidaciones</a>
+              <span class="slint-badge slint-badge--neutro">INT-07</span>
+            </li>
+            <li>
+              <a class="slint-boton slint-boton--secundario" href="exportacion.html">Exportar resultados</a>
+              <span class="slint-badge slint-badge--neutro">INT-13</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>

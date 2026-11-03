@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-07 Flujo de liquidación (clasificación integrada)</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <rect x="24" y="92" width="1232" height="96" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="122" font-size="15" font-weight="bold" fill="#333">Turno seleccionado</text>
+  <text x="40" y="150" font-size="13" fill="#444">Colaborador A · 12/10/2026 · Tramo 1: 22:00–06:00 (cruce de medianoche) · Sin segundo tramo</text>
+  <text x="40" y="172" font-size="12" fill="#666">Parámetros de ejemplo · Vigencia: demostración</text>
+
+  <rect x="24" y="208" width="1232" height="300" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="252" x2="1256" y2="252" stroke="#bbb"/>
+  <text x="40" y="236" font-size="13" font-weight="bold" fill="#444">Concepto</text>
+  <text x="360" y="236" font-size="13" font-weight="bold" fill="#444">Horas</text>
+  <text x="560" y="236" font-size="13" font-weight="bold" fill="#444">Detalle</text>
+  <text x="900" y="236" font-size="13" font-weight="bold" fill="#444">Observación</text>
+
+  <text x="40" y="288" font-size="13" fill="#444">Ordinarias</text><text x="360" y="288" font-size="13" fill="#444">2.0</text><text x="560" y="288" font-size="12" fill="#555">Ver detalle OH</text><text x="900" y="288" font-size="12" fill="#555">—</text>
+  <line x1="24" y1="304" x2="1256" y2="304" stroke="#eee"/>
+  <text x="40" y="332" font-size="13" fill="#444">Nocturnas</text><text x="360" y="332" font-size="13" fill="#444">6.0</text><text x="560" y="332" font-size="12" fill="#555">Ver detalle OH</text><text x="900" y="332" font-size="12" fill="#555">Incluye cruce de medianoche</text>
+  <line x1="24" y1="348" x2="1256" y2="348" stroke="#eee"/>
+  <text x="40" y="376" font-size="13" fill="#444">Extra diurnas</text><text x="360" y="376" font-size="13" fill="#444">0.0</text><text x="560" y="376" font-size="12" fill="#555">Ver detalle HE</text><text x="900" y="376" font-size="12" fill="#555">Cálculo simulado</text>
+  <line x1="24" y1="392" x2="1256" y2="392" stroke="#eee"/>
+  <text x="40" y="420" font-size="13" fill="#444">Extra nocturnas</text><text x="360" y="420" font-size="13" fill="#444">1.5</text><text x="560" y="420" font-size="12" fill="#555">Ver detalle HE</text><text x="900" y="420" font-size="12" fill="#555">Cálculo simulado</text>
+  <line x1="24" y1="436" x2="1256" y2="436" stroke="#eee"/>
+  <text x="40" y="464" font-size="13" fill="#444">Dominical / festivo</text><text x="360" y="464" font-size="13" fill="#444">0.0</text><text x="560" y="464" font-size="12" fill="#555">Ver detalle festivos</text><text x="900" y="464" font-size="12" fill="#555">Calendario ficticio</text>
+
+  <rect x="24" y="528" width="230" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="139" y="555" text-anchor="middle" font-size="13" fill="#555">Volver a consulta (INT-05)</text>
+  <rect x="278" y="528" width="260" height="42" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="408" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Continuar a resumen (INT-11)</text>
+
+  <rect x="24" y="602" width="1232" height="70" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="628" font-size="13" fill="#7a4a4a">Clasificación calculada con JavaScript puro sobre datos ficticios y parámetros de ejemplo.</text>
+  <text x="40" y="650" font-size="13" fill="#7a4a4a">No es una liquidación legal verificada. Los turnos nocturnos se clasifican según el rango de horas.</text>
+
+  <text x="24" y="716" font-size="12" fill="#888">Si el turno tiene errores de validación, se muestra aviso y enlace a INT-04.</text>
+</svg>

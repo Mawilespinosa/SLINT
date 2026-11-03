@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-10 Detalle de domingos y festivos</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <text x="24" y="104" font-size="15" font-weight="bold" fill="#333">Días clasificados en el turno</text>
+  <text x="24" y="126" font-size="12" fill="#666">Fechas ficticias del año 2099; los días de la semana corresponden al calendario real.</text>
+
+  <rect x="24" y="146" width="900" height="240" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="190" x2="924" y2="190" stroke="#bbb"/>
+  <text x="40" y="174" font-size="13" font-weight="bold" fill="#444">Fecha ficticia</text>
+  <text x="230" y="174" font-size="13" font-weight="bold" fill="#444">Día de la semana</text>
+  <text x="420" y="174" font-size="13" font-weight="bold" fill="#444">Motivo</text>
+  <text x="760" y="174" font-size="13" font-weight="bold" fill="#444">Horas</text>
+
+  <text x="40" y="226" font-size="13" fill="#444">05/01/2099</text><text x="230" y="226" font-size="13" fill="#444">Lunes</text><text x="420" y="226" font-size="13" fill="#444">Día hábil (demostración)</text><text x="760" y="226" font-size="13" fill="#444">8.0</text>
+  <line x1="24" y1="242" x2="924" y2="242" stroke="#eee"/>
+  <text x="40" y="274" font-size="13" fill="#444">11/01/2099</text><text x="230" y="274" font-size="13" fill="#444">Domingo</text><text x="420" y="274" font-size="13" fill="#444">Domingo</text><text x="760" y="274" font-size="13" fill="#444">8.0</text>
+  <line x1="24" y1="290" x2="924" y2="290" stroke="#eee"/>
+  <text x="40" y="322" font-size="13" fill="#444">12/01/2099</text><text x="230" y="322" font-size="13" fill="#444">Lunes</text><text x="420" y="322" font-size="13" fill="#444">Festivo trasladado (Reyes Magos) *</text><text x="760" y="322" font-size="13" fill="#444">8.0</text>
+
+  <text x="40" y="366" font-size="11" fill="#777">* Festivo trasladado en Colombia, sujeto a verificación de la norma vigente.</text>
+
+  <rect x="948" y="146" width="308" height="240" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="964" y="176" font-size="14" font-weight="bold" fill="#333">Calendario de referencia</text>
+  <text x="964" y="206" font-size="12" fill="#555">Calendario ficticio de demostración</text>
+  <rect x="964" y="224" width="276" height="112" fill="#fcfcfc" stroke="#bbb" stroke-dasharray="4 3"/>
+  <text x="1102" y="286" text-anchor="middle" font-size="12" fill="#888">[ Calendario / lista de festivos ]</text>
+
+  <rect x="24" y="410" width="1232" height="96" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="438" font-size="13" fill="#7a4a4a">Datos de demostración: turnos, horas y valores monetarios son ficticios y no constituyen una liquidación legal verificada.</text>
+  <text x="40" y="460" font-size="13" fill="#7a4a4a">La clasificación de festivos es ilustrativa y requiere revisión de vigencia normativa.</text>
+  <text x="40" y="482" font-size="13" fill="#7a4a4a">Si no hay calendario configurado, se muestra: "No existe calendario de festivos configurado".</text>
+
+  <rect x="24" y="530" width="260" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="154" y="557" text-anchor="middle" font-size="13" fill="#555">Volver al flujo (INT-07)</text>
+
+  <text x="24" y="620" font-size="12" fill="#888">La fecha exacta y el motivo se muestran en el detalle, conforme a HU-05 CA2.</text>
+</svg>

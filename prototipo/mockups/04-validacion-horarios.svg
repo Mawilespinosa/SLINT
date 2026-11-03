@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-04 Validación de horarios</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <rect x="24" y="92" width="1232" height="52" rx="4" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="123" font-size="14" fill="#444">Turnos pendientes de validación · 4 registros de demostración</text>
+  <rect x="1060" y="102" width="180" height="32" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="1150" y="123" text-anchor="middle" font-size="13" fill="#333">Volver a validar</text>
+
+  <rect x="24" y="164" width="1232" height="420" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="208" x2="1256" y2="208" stroke="#bbb"/>
+  <text x="40" y="192" font-size="13" font-weight="bold" fill="#444">Colaborador</text>
+  <text x="220" y="192" font-size="13" font-weight="bold" fill="#444">Fecha</text>
+  <text x="360" y="192" font-size="13" font-weight="bold" fill="#444">Tramo 1</text>
+  <text x="540" y="192" font-size="13" font-weight="bold" fill="#444">Tramo 2</text>
+  <text x="740" y="192" font-size="13" font-weight="bold" fill="#444">Estado</text>
+  <text x="900" y="192" font-size="13" font-weight="bold" fill="#444">Hallazgo</text>
+
+  <text x="40" y="240" font-size="13" fill="#444">Colaborador A</text><text x="220" y="240" font-size="13" fill="#444">12/10/2026</text><text x="360" y="240" font-size="13" fill="#444">22:00–06:00</text><text x="540" y="240" font-size="13" fill="#444">—</text>
+  <rect x="740" y="222" width="90" height="24" rx="3" fill="#e6f2e6" stroke="#8fbf8f"/><text x="785" y="239" text-anchor="middle" font-size="12" fill="#2f6b2f">Válido</text>
+  <text x="900" y="240" font-size="12" fill="#555">Nocturno con cruce de medianoche</text>
+
+  <text x="40" y="296" font-size="13" fill="#444">Colaborador B</text><text x="220" y="296" font-size="13" fill="#444">13/10/2026</text><text x="360" y="296" font-size="13" fill="#444">08:00–</text><text x="540" y="296" font-size="13" fill="#444">—</text>
+  <rect x="740" y="278" width="90" height="24" rx="3" fill="#f7dede" stroke="#c58f8f"/><text x="785" y="295" text-anchor="middle" font-size="12" fill="#8a2f2f">Error</text>
+  <text x="900" y="296" font-size="12" fill="#555">Tramo incompleto: falta salida 1</text>
+
+  <text x="40" y="352" font-size="13" fill="#444">Colaborador C</text><text x="220" y="352" font-size="13" fill="#444">14/10/2026</text><text x="360" y="352" font-size="13" fill="#444">06:00–23:30</text><text x="540" y="352" font-size="13" fill="#444">—</text>
+  <rect x="740" y="334" width="110" height="24" rx="3" fill="#fbf3dc" stroke="#c9b06a"/><text x="795" y="351" text-anchor="middle" font-size="12" fill="#7a5d12">Advertencia</text>
+  <text x="900" y="352" font-size="12" fill="#555">Advertencia configurable (umbral ejemplo: 17.5 h)</text>
+
+  <text x="40" y="408" font-size="13" fill="#444">Colaborador D</text><text x="220" y="408" font-size="13" fill="#444">15/10/2026</text><text x="360" y="408" font-size="13" fill="#444">08:00–12:00</text><text x="540" y="408" font-size="13" fill="#444">11:00–16:00</text>
+  <rect x="740" y="390" width="90" height="24" rx="3" fill="#f7dede" stroke="#c58f8f"/><text x="785" y="407" text-anchor="middle" font-size="12" fill="#8a2f2f">Error</text>
+  <text x="900" y="408" font-size="12" fill="#555">Solapamiento real entre tramos</text>
+
+  <rect x="24" y="612" width="1232" height="60" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="638" font-size="13" fill="#7a4a4a">Regla clave: una salida con hora menor que la entrada NO es inválida por sí sola si el turno cruza medianoche.</text>
+  <text x="40" y="658" font-size="13" fill="#7a4a4a">Se distinguen cuatro casos: nocturno válido, tramo incompleto, duración inconsistente (umbral configurable de ejemplo) y solapamiento real.</text>
+
+  <text x="24" y="720" font-size="12" fill="#888">Acciones por fila: Corregir (→ INT-03) · Volver a consulta (→ INT-05)</text>
+</svg>

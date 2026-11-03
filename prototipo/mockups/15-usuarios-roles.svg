@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-15 Usuarios y roles</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <text x="24" y="104" font-size="15" font-weight="bold" fill="#333">Usuarios ficticios</text>
+  <rect x="24" y="120" width="760" height="260" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="164" x2="784" y2="164" stroke="#bbb"/>
+  <text x="40" y="148" font-size="13" font-weight="bold" fill="#444">Nombre</text>
+  <text x="280" y="148" font-size="13" font-weight="bold" fill="#444">Rol</text>
+  <text x="480" y="148" font-size="13" font-weight="bold" fill="#444">Estado</text>
+  <text x="640" y="148" font-size="13" font-weight="bold" fill="#444">Permisos</text>
+
+  <text x="40" y="196" font-size="13" fill="#444">Usuario Demo 1</text><text x="280" y="196" font-size="13" fill="#444">Auxiliar de nómina</text><text x="480" y="196" font-size="13" fill="#444">Activo</text><text x="640" y="196" font-size="12" fill="#555">Editar turnos</text>
+  <line x1="24" y1="212" x2="784" y2="212" stroke="#eee"/>
+  <text x="40" y="244" font-size="13" fill="#444">Usuario Demo 2</text><text x="280" y="244" font-size="13" fill="#444">Coordinador operativo</text><text x="480" y="244" font-size="13" fill="#444">Activo</text><text x="640" y="244" font-size="12" fill="#555">Validar turnos</text>
+  <line x1="24" y1="260" x2="784" y2="260" stroke="#eee"/>
+  <text x="40" y="292" font-size="13" fill="#444">Usuario Demo 3</text><text x="280" y="292" font-size="13" fill="#444">Administrador</text><text x="480" y="292" font-size="13" fill="#444">Activo</text><text x="640" y="292" font-size="12" fill="#555">Configurar</text>
+  <line x1="24" y1="308" x2="784" y2="308" stroke="#eee"/>
+  <text x="40" y="340" font-size="13" fill="#444">Usuario Demo 4</text><text x="280" y="340" font-size="13" fill="#444">Solo consulta</text><text x="480" y="340" font-size="13" fill="#444">Inactivo</text><text x="640" y="340" font-size="12" fill="#555">Leer</text>
+
+  <rect x="808" y="120" width="448" height="260" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="824" y="150" font-size="14" font-weight="bold" fill="#333">Nuevo usuario (demo)</text>
+  <text x="824" y="180" font-size="12" fill="#444">Nombre</text>
+  <rect x="824" y="188" width="416" height="32" fill="#fff" stroke="#9a9a9a"/>
+  <text x="824" y="244" font-size="12" fill="#444">Correo</text>
+  <rect x="824" y="252" width="416" height="32" fill="#fff" stroke="#9a9a9a"/>
+  <text x="824" y="308" font-size="12" fill="#444">Rol</text>
+  <rect x="824" y="316" width="416" height="32" fill="#fff" stroke="#9a9a9a"/>
+  <text x="836" y="337" font-size="12" fill="#aaa">Seleccione rol</text>
+
+  <rect x="24" y="410" width="220" height="40" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="134" y="435" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Guardar (demo)</text>
+  <rect x="264" y="410" width="220" height="40" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="374" y="435" text-anchor="middle" font-size="13" fill="#555">Ir a parámetros (INT-16)</text>
+
+  <rect x="24" y="480" width="1232" height="90" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="40" y="508" font-size="13" font-weight="bold" fill="#7a4a4a">Demostración visual sin persistencia</text>
+  <text x="40" y="532" font-size="12" fill="#7a4a4a">No hay CRUD completo ni almacenamiento. El formulario valida en el navegador.</text>
+  <text x="40" y="552" font-size="12" fill="#7a4a4a">No se afirma que se creó, editó ni eliminó un usuario real.</text>
+
+  <rect x="24" y="600" width="260" height="40" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="154" y="625" text-anchor="middle" font-size="12" fill="#555">Volver al dashboard (INT-02)</text>
+</svg>

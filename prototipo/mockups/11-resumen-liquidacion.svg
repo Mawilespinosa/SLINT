@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Arial, sans-serif">
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ececec" stroke="#9a9a9a"/>
+  <text x="24" y="40" font-size="20" font-weight="bold" fill="#333">SLINT · INT-11 Resumen de liquidación</text>
+  <text x="820" y="40" font-size="13" fill="#555">Turnos · Liquidaciones · Reportes · Administración</text>
+
+  <rect x="24" y="92" width="1232" height="82" rx="6" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="40" y="122" font-size="15" font-weight="bold" fill="#333">Colaborador A · 12/10/2026</text>
+  <text x="40" y="148" font-size="13" fill="#555">Turno: 22:00–06:00 (cruce de medianoche) · 8 horas</text>
+
+  <rect x="24" y="194" width="820" height="300" rx="4" fill="#fafafa" stroke="#9a9a9a"/>
+  <line x1="24" y1="238" x2="844" y2="238" stroke="#bbb"/>
+  <text x="40" y="222" font-size="13" font-weight="bold" fill="#444">Concepto</text>
+  <text x="360" y="222" font-size="13" font-weight="bold" fill="#444">Horas</text>
+  <text x="560" y="222" font-size="13" font-weight="bold" fill="#444">Subtotal (COP)</text>
+
+  <text x="40" y="274" font-size="13" fill="#444">Horas ordinarias</text><text x="360" y="274" font-size="13" fill="#444">2.0</text><text x="560" y="274" font-size="13" fill="#444">$ 24.000</text>
+  <line x1="24" y1="290" x2="844" y2="290" stroke="#eee"/>
+  <text x="40" y="318" font-size="13" fill="#444">Horas nocturnas</text><text x="360" y="318" font-size="13" fill="#444">6.0</text><text x="560" y="318" font-size="13" fill="#444">$ 86.400</text>
+  <line x1="24" y1="334" x2="844" y2="334" stroke="#eee"/>
+  <text x="40" y="362" font-size="13" fill="#444">Extra nocturnas</text><text x="360" y="362" font-size="13" fill="#444">1.5</text><text x="560" y="362" font-size="13" fill="#444">$ 30.240</text>
+  <line x1="24" y1="378" x2="844" y2="378" stroke="#eee"/>
+  <text x="40" y="406" font-size="13" fill="#444">Dominical / festivo</text><text x="360" y="406" font-size="13" fill="#444">0.0</text><text x="560" y="406" font-size="13" fill="#444">$ 0</text>
+  <line x1="24" y1="422" x2="844" y2="422" stroke="#bbb"/>
+  <text x="40" y="456" font-size="15" font-weight="bold" fill="#333">Total liquidación (COP)</text>
+  <text x="560" y="456" font-size="15" font-weight="bold" fill="#333">$ 140.640</text>
+
+  <rect x="872" y="194" width="384" height="140" fill="#fbf0f0" stroke="#c9a3a3" stroke-dasharray="4 3"/>
+  <text x="888" y="224" font-size="13" font-weight="bold" fill="#7a4a4a">Liquidación de demostración</text>
+  <text x="888" y="250" font-size="12" fill="#7a4a4a">Valores ficticios. No es un documento</text>
+  <text x="888" y="270" font-size="12" fill="#7a4a4a">legal ni una liquidación verificada.</text>
+
+  <rect x="872" y="354" width="384" height="140" fill="#f7f7f7" stroke="#9a9a9a"/>
+  <text x="888" y="384" font-size="13" font-weight="bold" fill="#333">Siguiente paso</text>
+  <text x="888" y="410" font-size="12" fill="#555">Revise el detalle por concepto o</text>
+  <text x="888" y="430" font-size="12" fill="#555">exporte un archivo de demostración.</text>
+
+  <rect x="24" y="530" width="280" height="42" rx="4" fill="#d9d9d9" stroke="#8a8a8a"/>
+  <text x="164" y="557" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Ver detalle por concepto (INT-12)</text>
+  <rect x="324" y="530" width="220" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="434" y="557" text-anchor="middle" font-size="13" fill="#555">Exportar (INT-13)</text>
+  <rect x="564" y="530" width="220" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="674" y="557" text-anchor="middle" font-size="13" fill="#555">Ver historial (INT-14)</text>
+  <rect x="804" y="530" width="220" height="42" rx="4" fill="#fff" stroke="#9a9a9a"/>
+  <text x="914" y="557" text-anchor="middle" font-size="13" fill="#555">Volver al flujo (INT-07)</text>
+
+  <text x="24" y="620" font-size="12" fill="#888">Si el turno no completó la clasificación, se muestra aviso y enlace a INT-04.</text>
+</svg>

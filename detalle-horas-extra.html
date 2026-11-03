@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — detalle de horas extra de la liquidación.">
+  <title>SLINT · Horas extra</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/nucleo/turnos.js" defer></script>
+  <script src="js/datos/liquidaciones-demo.js" defer></script>
+  <script src="js/paginas/liquidacion-comun.js" defer></script>
+  <script src="js/paginas/liquidacion-extra.js" defer></script>
+</head>
+<body data-pagina="INT-09" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+  <header id="slint-cabecera"></header>
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Liquidaciones</p>
+        <h1>Horas extra</h1>
+        <p class="slint-subtitulo">
+          Horas extra incluidas en el ejemplo precargado, con cantidades y valores
+          ilustrativos.
+        </p>
+      </header>
+      <div id="detalle-liquidacion"></div>
+    </main>
+  </div>
+  <footer id="slint-pie"></footer>
+</body>
+</html>

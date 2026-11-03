@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SLINT — validación de horarios, duraciones y solapamientos de turnos.">
+  <title>SLINT · Validación de horarios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/nucleo/navegacion.js" defer></script>
+  <script src="js/nucleo/utilidades.js" defer></script>
+  <script src="js/nucleo/componentes.js" defer></script>
+  <script src="js/datos/datos-demo.js" defer></script>
+  <script src="js/nucleo/turnos.js" defer></script>
+  <script src="js/paginas/validacion-horarios.js" defer></script>
+</head>
+<body data-pagina="INT-04" data-menu="true" data-demo="true">
+  <a class="slint-saltar" href="#contenido">Saltar al contenido</a>
+
+  <header id="slint-cabecera"></header>
+
+  <div class="slint-layout">
+    <aside id="slint-menu" aria-label="Menú principal"></aside>
+
+    <main id="contenido" class="slint-contenido" tabindex="-1">
+      <header class="slint-encabezado-pagina">
+        <p class="slint-sobretitulo">Gestión de turnos</p>
+        <h1>Validación de horarios</h1>
+        <p class="slint-subtitulo">
+          Revise duraciones, fechas y solapamientos. Los errores bloquean el avance;
+          las advertencias son configurables y no impiden continuar.
+        </p>
+      </header>
+
+      <div class="slint-panel">
+        <div class="slint-campo">
+          <label class="slint-campo__label" for="selector-turno">Turno a revisar</label>
+          <select class="slint-campo__control" id="selector-turno"></select>
+        </div>
+      </div>
+
+      <div id="sin-turno" class="slint-vacio slint-mt-4" hidden>
+        <h2 class="slint-vacio__titulo">No hay turnos para revisar</h2>
+        <p>Registre un turno de demostración para poder validarlo.</p>
+        <p class="slint-mt-3"><a class="slint-boton" href="registro-turno.html">Registrar turno (INT-03)</a></p>
+      </div>
+
+      <div id="detalle-turno" class="slint-mt-4"></div>
+
+      <p class="slint-texto-suave slint-mt-4">
+        Umbral de advertencia: 17,5 horas, solo como ejemplo configurable.
+        No es un límite legal ni una regla de nómina verificada.
+      </p>
+    </main>
+  </div>
+
+  <footer id="slint-pie"></footer>
+</body>
+</html>
