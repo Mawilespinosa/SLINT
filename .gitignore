@@ -1,0 +1,29 @@
+# SLINT - Archivos excluidos del control de versiones
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Dependencias PHP y JavaScript
+/vendor/
+/node_modules/
+
+# Archivos generados por Laravel y Vite
+/public/build/
+/public/hot
+/storage/*.key
+/storage/logs/*
+/bootstrap/cache/*.php
+
+# Archivos del entorno local
+/.idea/
+/.vscode/*
+!/.vscode/extensions.json
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
